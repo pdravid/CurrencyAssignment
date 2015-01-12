@@ -6,13 +6,17 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String country = in.nextLine();
+        String country = getCountryName();
         Country c = new Country(country);
         System.out.println(c.getCurrencyName().getName());
         System.out.println(c.getCurrencyName().getSymbol());
 
 
+    }
+
+    private static String getCountryName() {
+        Scanner in = new Scanner(System.in);
+        return in.nextLine();
     }
 
 
